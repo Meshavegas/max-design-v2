@@ -6,6 +6,10 @@ import Partenaires from "./components/partenaire";
 import Presentation from "./components/Presentation";
 import Temoignage from "./components/Temoignage";
 import Services from "./components/Services";
+import Footer from "./components/Footer";
+import FAQ from "./components/FAQ";
+import { faqData } from "./components/datas";
+import Promotions from "./components/Promotions";
 export default function Home() {
   return (
     <main className="">
@@ -13,21 +17,53 @@ export default function Home() {
 
       <Screenwidth
         background="bg-hero-image bg-left md:bg-center bg-cover flex justify-center"
-        padding=" md:px-40 md:py-60 px-5 py-28"
+        padding=" "
       >
-        <Heros />
+        <div className="bg-light lg:px-0 lg:py-60 px-5 py-28 w-full bg-opacity-80 justify-center flex">
+          <Heros />
+        </div>
       </Screenwidth>
-      <Screenwidth bg="bg-white">
+      <Screenwidth
+        background=" bg-white-light"
+        padding=" lg:px-20 lg:py-32 px-5 py-10"
+      >
         <Partenaires />
       </Screenwidth>
-      <Screenwidth bg="bg-white" padding=" md:px-0 md:py-0 px-5 py-10">
+      <Screenwidth
+        background=" bg-light-100"
+        padding=" lg:px-0 lg:py-0 px-5 py-10"
+      >
         <Presentation />
       </Screenwidth>
-      <Screenwidth bg="bg-white" padding=" md:px-0 md:py-0 px-5 py-10">
+      <Screenwidth
+        background=" bg-light-100"
+        padding=" lg:px-0 lg:py-0 px-5 py-10"
+      >
+        <Promotions />
+      </Screenwidth>
+      <Screenwidth
+        background=" bg-white-light"
+        padding=" lg:px-0 lg:py-20 px-5 py-10"
+      >
         <Temoignage />
       </Screenwidth>
-      <Screenwidth bg="bg-white" padding=" md:px-32 md:py-32 px-5 py-10">
+      <Screenwidth
+        background=" bg-white-light-s"
+        padding=" lg:px-32 lg:py-32 px-5 py-10"
+      >
         <Services />
+      </Screenwidth>
+      <Screenwidth
+        background=" bg-gray"
+        padding=" lg:px-10 lg:py-20 px-5 py-10"
+      >
+        <FAQ data={faqData} />
+      </Screenwidth>
+      <Screenwidth
+        background="bg-light"
+        padding=" lg:px-10 lg:py-10 px-5 py-10"
+      >
+        <Footer />
       </Screenwidth>
     </main>
   );

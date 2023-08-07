@@ -3,7 +3,7 @@ import Image from "next/image";
 import { BsQuote } from "react-icons/bs";
 const SingleTemoignange = () => {
   return (
-    <div className="md:w-2/5 w-full gap-2 flex-col bg-light-grey p-8 rounded-2xl">
+    <div className="md:w-2/5 w-full gap-2 flex-col bg-gray p-8 rounded-2xl">
       <div className="flex gap-2 items-center">
         <Image
           src="/hero.jpg"
@@ -23,7 +23,7 @@ const SingleTemoignange = () => {
         <p className="">
           <BsQuote style={{ fontSize: "3rem" }} />
         </p>
-        <p className=" text-2xl md:text-justify">
+        <p className=" text-2xl md:text-justify line-clamp-6">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
           laboriosam necessitatibus ex perferendis ullam unde ipsam veniam
           quibusdam commodi blanditiis. SingleTemoignange Lorem ipsum dolor sit

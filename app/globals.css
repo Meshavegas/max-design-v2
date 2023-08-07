@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.back {
+  border-radius: 83px;
+  background: #005baa;
+  box-shadow: 16px 16px 25px #004b8b, -16px -16px 25px #006bc9;
+}

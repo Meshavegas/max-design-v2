@@ -32,7 +32,7 @@ const NavBar = () => {
               alt="logo"
               width={1080}
               height={1080}
-              className=" md:w-40 w-20"
+              className=" md:w-40 w-20 "
             />
           </Link>
         </h1>
@@ -41,7 +41,7 @@ const NavBar = () => {
             <Link
               key={name + to}
               href={to}
-              className="text-white hover:text-light"
+              className="text-white hover:text-orange"
             >
               {name}
             </Link>
@@ -83,7 +83,7 @@ const NavBar = () => {
               <Link
                 key={name + to}
                 href={to}
-                className="text-white hover:text-light"
+                className="text-white hover:text-orange"
               >
                 {name}
               </Link>
