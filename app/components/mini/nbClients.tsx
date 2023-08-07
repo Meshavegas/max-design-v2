@@ -6,9 +6,11 @@ type props = {
 };
 const NbClients = ({ nombre, type, classname }: props) => {
   return (
-    <div className={`flex flex-col ${classname}`}>
-      <div className=" text-3xl font-bold">{nombre}M</div>
-      <div className=" text-2xl">{type}</div>
+    <div
+      className={`flex flex-col ${classname} justify-center items-center boder`}
+    >
+      <div className=" text-4xl font-bold">{nombre}M</div>
+      <div className=" text-3xl">{type}</div>
     </div>
   );
 };

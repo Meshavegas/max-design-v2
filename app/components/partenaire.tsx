@@ -3,8 +3,8 @@ import NbClients from "./mini/nbClients";
 
 const Partenaires = () => {
   return (
-    <div className="border">
-      <div className=" flex gap-4 flex-wrap items-center justify-center">
+    <div className="borer">
+      <div className=" flex gap-4 flex-wrap  items-center justify-center border">
         <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
         <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
         <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
