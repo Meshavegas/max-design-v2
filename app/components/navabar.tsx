@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { BsCart3, BsSuitHeart, BsSearch } from "react-icons/bs";
+import { BsCart3 } from "react-icons/bs";
 import { MdOutlineClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 export const navLinks = [
