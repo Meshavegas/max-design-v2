@@ -63,10 +63,10 @@ const Footer = () => {
           <div className="flex hover:cursor-pointer hover:text-orange w-fit">
             <input
               type="text"
-              className=" rounded-2xl h-8 px-4  opacity-50"
+              className=" rounded-3xl h-10 px-4  opacity-50"
               placeholder="Votre addresse E-mail"
             ></input>
-            <div className="  -ml-14 bg-white w-fit px-5 h-8 rounded-2xl flex justify-center items-center ">
+            <div className="  -ml-14 bg-white w-fit px-5 h-10 rounded-3xl flex justify-center items-center ">
               <BsArrowUpRight
                 style={{ fontSize: "1.2rem", fontWeight: "bold" }}
               />
