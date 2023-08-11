@@ -26,7 +26,7 @@ const Footer = () => {
       <div className="flex justify-between flex-col md:flex-row">
         <div className=" w-full md:w-1/5">
           <div className=" text-2xl font-bold text-white">
-            Service d'infographie et Design pour tous
+            Service d&apos;infographie et Design pour tous
           </div>
           <div className=" bg-white rounded-2xl w-fit px-3 py-1 mt-2 text-2xl transform transition duration-500 hover:scale-x-110 hover:bg-light hover:text-white hover:border hover:cursor-pointer">
             Nous engager
