@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { BsQuote } from "react-icons/bs";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 const SingleTemoignange = () => {
   return (
-    <div className="md:w-2/5 w-full gap-2 flex-col bg-gray p-8 rounded-2xl">
+    <div className="md:w-[32%] w-full gap-2 flex-col bg-gray p-8 rounded-2xl">
       <div className="flex gap-2 items-center">
         <Image
           src="/hero.jpg"

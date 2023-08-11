@@ -1,14 +1,14 @@
 import React from "react";
 import NbClients from "./mini/nbClients";
+import { getPartenaire } from "@/sanity/sanity-utils";
 
-const Partenaires = () => {
+const Partenaires = async () => {
+  const partern = await getPartenaire();
   return (
     <div className="">
       <div className=" flex gap-4 flex-wrap  items-center justify-center ">
         <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
-        <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
-        <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
-        <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
+        <NbClients nombre={104} type="Projects " classname="w-1/3 md:w-1/5" />
       </div>
       <div className=" border-b border-b-orange mt-2"></div>
       <div className="">
@@ -19,37 +19,21 @@ const Partenaires = () => {
           ceux qui avec nous colaborons sainement
         </div>
       </div>
-      <div className=" mt-2 flex flex-row flex-wrap gap-4 justify-center">
-        <div className="w-1/3 h-28 bg-black md:w-1/5">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam vel
-          voluptates atque ipsum.
-        </div>
-        <div className="w-1/3 h-28 bg-black md:w-1/6">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam vel
-          voluptates atque ipsum.
-        </div>
-        <div className="w-1/3 h-28 bg-black md:w-1/6">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam vel
-          voluptates atque ipsum.
-        </div>
-        <div className="w-1/3 h-28 bg-black md:w-1/6">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam vel
-          voluptates atque ipsum.
-        </div>
-        <div className="w-1/3 h-28 bg-black md:w-1/6">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam vel
-          voluptates atque ipsum.
-        </div>
-        <div className="w-1/3 h-28 bg-black md:w-1/6">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ipsam vel
-          voluptates atque ipsum.
-        </div>
+      <div className=" mt-20 flex flex-row gap-4 items-center justify-center">
+        {partern.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className="transform transition duration-500 hover:scale-110   md:w-[20%] w-1/2 "
+            >
+              <img
+                src={item.logo}
+                alt={item.nom}
+                className="object-fit w-full"
+              />
+            </div>
+          );
+        })}
       </div>
     </div>
   );

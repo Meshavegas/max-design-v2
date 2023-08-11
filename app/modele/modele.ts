@@ -1,3 +1,4 @@
+import { type } from "os";
 import { PortableTextBlock } from "sanity";
 
 type url = {
@@ -18,4 +19,12 @@ export type service = {
 export type Cathegorie = {
   _id: string;
   title: string;
+};
+
+export type partenaire = {
+  id: string;
+  slug: string;
+  nom: string;
+  logo: string;
+  lien: string;
 };

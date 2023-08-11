@@ -7,3 +7,22 @@
   background: #005baa;
   box-shadow: 16px 16px 25px #004b8b, -16px -16px 25px #006bc9;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #004b8b !important;
+  background-color: #473c33 !important;
+  border-radius: 50% !important;
+  height: 2rem;
+  width: 2rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.swiper-pagination-bullet {
+  background-color: #004b8b;
+  font-size: 4rem;
+}

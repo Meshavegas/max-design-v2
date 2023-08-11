@@ -10,15 +10,12 @@ const Services = (props: { service: service[] }) => {
   useEffect(() => {
     //  service
     if (filtreFonction !== "") {
-      console.log(filtreFonction);
-
       let catfilItems = [];
       for (let i = 0; i < props.service.length; i++) {
         if (props.service[i].category.title === filtreFonction) {
           catfilItems.push(props.service[i]);
         }
       }
-      console.log(catfilItems.length, "taile++++++++++++");
 
       setServices(catfilItems);
 
@@ -38,7 +35,7 @@ const Services = (props: { service: service[] }) => {
             </h1>
             <div className=" bg-white  flex flex-row w-fit px-1 py-1 rounded-3xl gap-1 ">
               <h1
-                className={` transition-colors duration-500  w-fit px-3 py-1 rounded-2xl hover:cursor-pointer h-fit ${
+                className={` transition-colors duration-500  w-[70px] px-3 py-1 rounded-2xl hover:cursor-pointer h-fit ${
                   filtreFonction === ""
                     ? " bg-light text-white"
                     : " bg-white text-black"

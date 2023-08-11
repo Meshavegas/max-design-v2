@@ -44,7 +44,7 @@ export default function Home() {
       </Screenwidth>
       <Screenwidth
         background=" bg-white-light"
-        padding=" lg:px-0 lg:py-20 px-5 py-10"
+        padding=" lg:px-20 lg:py-20 px-10 py-10"
       >
         <Temoignage />
       </Screenwidth>
