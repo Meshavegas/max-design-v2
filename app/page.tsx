@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
 import { faqData } from "./components/datas";
 import Promotions from "./components/Promotions";
+import { ServicesGet } from "./components/ServicesGet";
 export default function Home() {
   return (
     <main className="">
@@ -51,7 +52,7 @@ export default function Home() {
         background=" bg-white-light-s"
         padding=" lg:px-32 lg:py-32 px-5 py-10"
       >
-        <Services />
+        <ServicesGet />
       </Screenwidth>
       <Screenwidth
         background=" bg-gray"

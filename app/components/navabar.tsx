@@ -32,7 +32,7 @@ const NavBar = () => {
               alt="logo"
               width={1080}
               height={1080}
-              className=" md:w-40 w-20 "
+              className=" md:w-28 w-20 "
             />
           </Link>
         </h1>
