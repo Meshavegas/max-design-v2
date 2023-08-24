@@ -17,7 +17,7 @@ const Presentation = () => {
           Nous engager
         </div>
       </div>
-      <div className="lg:w-1/2 w-full mt-4 lg:mt-0">
+      <div className="lg:w-1/2 w-full mt-4 lg:mt-0  flex">
         <Image
           src="/hero.jpg"
           alt="logo"

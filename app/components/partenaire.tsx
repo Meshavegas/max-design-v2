@@ -1,42 +1,154 @@
+"use client";
 import React from "react";
 import NbClients from "./mini/nbClients";
-import { getPartenaire } from "@/sanity/sanity-utils";
+import styled, { keyframes, css } from "styled-components";
+import { partenaire } from "../modele/modele";
 
-const Partenaires = async () => {
-  const partern = await getPartenaire();
+const Partenaires = async (props: { partern: partenaire[] }) => {
+  const { partern } = props;
+
   return (
-    <div className="">
-      <div className=" flex gap-4 flex-wrap  items-center justify-center ">
+    <div>
+      <div className=" flex gap-4 flex-wrap  items-center justify-center  ">
         <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
         <NbClients nombre={104} type="Projects " classname="w-1/3 md:w-1/5" />
       </div>
       <div className=" border-b border-b-orange mt-2"></div>
-      <div className="">
-        <div className=" text-3xl mt-2 md:text-4xl font-bold">
-          Nos Partenaires{" "}
-        </div>
-        <div className=" text-2xl mt-2 md:text-3xl">
-          ceux qui avec nous colaborons sainement
-        </div>
-      </div>
-      <div className=" mt-20 flex flex-row gap-4 items-center justify-center">
-        {partern.map((item, index) => {
-          return (
-            <div
-              key={index}
-              className="transform transition duration-500 hover:scale-110   md:w-[20%] w-1/2 "
-            >
-              <img
-                src={item.logo}
-                alt={item.nom}
-                className="object-fit w-full"
-              />
-            </div>
-          );
-        })}
-      </div>
+      <AppContainer>
+        <Wrapper>
+          <Text> Nos Partenaires</Text>
+          <Note>ceux qui avec nous colaborons sainement</Note>
+          <Marquee>
+            <MarqueeGroup>
+              {partern.map((el) => (
+                <ImageGroup>
+                  <Image src={el.logo} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+            <MarqueeGroup>
+              {partern.map((el) => (
+                <ImageGroup>
+                  <Image src={el.logo} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup>
+          </Marquee>
+          <Marquee>
+            <MarqueeGroup2>
+              {partern.map((el) => (
+                <ImageGroup>
+                  <Image src={el.logo} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup2>
+            <MarqueeGroup2>
+              {partern.map((el) => (
+                <ImageGroup>
+                  <Image src={el.logo} />
+                </ImageGroup>
+              ))}
+            </MarqueeGroup2>
+          </Marquee>
+        </Wrapper>
+      </AppContainer>
     </div>
   );
 };
 
 export default Partenaires;
+
+const AppContainer = styled.div`
+  width: 100%;
+  color: #000000;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const Text = styled.div`
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #02203c;
+`;
+
+const Note = styled.div`
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 40px;
+  color: #7c8e9a;
+`;
+
+const Marquee = styled.div`
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  user-select: none;
+
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+`;
+
+const scrollX = keyframes`
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+`;
+
+const common = css`
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  animation: ${scrollX} 30s linear infinite;
+`;
+
+const MarqueeGroup = styled.div`
+  ${common}
+`;
+const MarqueeGroup2 = styled.div`
+  ${common}
+  animation-direction: reverse;
+  animation-delay: -3s;
+`;
+
+const ImageGroup = styled.div`
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 1rem + 40vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+`;
+
+const Image = styled.img`
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+  padding: 5px 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+`;
