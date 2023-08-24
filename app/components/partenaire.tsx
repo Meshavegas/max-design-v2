@@ -4,7 +4,7 @@ import NbClients from "./mini/nbClients";
 import styled, { keyframes, css } from "styled-components";
 import { partenaire } from "../modele/modele";
 
-const Partenaires = async (props: { partern: partenaire[] }) => {
+const Partenaires = (props: { partern: partenaire[] }) => {
   const { partern } = props;
 
   return (
@@ -20,15 +20,15 @@ const Partenaires = async (props: { partern: partenaire[] }) => {
           <Note>ceux qui avec nous colaborons sainement</Note>
           <Marquee>
             <MarqueeGroup>
-              {partern.map((el) => (
-                <ImageGroup>
+              {partern.map((el, key) => (
+                <ImageGroup key={key}>
                   <Image src={el.logo} />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
             <MarqueeGroup>
-              {partern.map((el) => (
-                <ImageGroup>
+              {partern.map((el, key) => (
+                <ImageGroup key={key}>
                   <Image src={el.logo} />
                 </ImageGroup>
               ))}
@@ -36,15 +36,15 @@ const Partenaires = async (props: { partern: partenaire[] }) => {
           </Marquee>
           <Marquee>
             <MarqueeGroup2>
-              {partern.map((el) => (
-                <ImageGroup>
+              {partern.map((el, key) => (
+                <ImageGroup key={key}>
                   <Image src={el.logo} />
                 </ImageGroup>
               ))}
             </MarqueeGroup2>
             <MarqueeGroup2>
-              {partern.map((el) => (
-                <ImageGroup>
+              {partern.map((el, key) => (
+                <ImageGroup key={key}>
                   <Image src={el.logo} />
                 </ImageGroup>
               ))}
