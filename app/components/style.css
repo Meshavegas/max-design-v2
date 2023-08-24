@@ -1,0 +1,37 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slides {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+}
+.logos-slide {
+  display: inline-block;
+  flex-wrap: nowrap;
+  animation: 35s slide infinite linear;
+}
+.logos-slide img {
+  height: 100px;
+  margin: 0 20px;
+}
+.logos-slides img {
+  height: 100px;
+  margin: 0 20px;
+}
+.logos-slides {
+  display: inline-flex;
+  animation: 35s slides infinite linear;
+}
