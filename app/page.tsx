@@ -2,7 +2,7 @@ import Image from "next/image";
 import Screenwidth from "./components/screenwidth";
 import NavBar from "./components/navabar";
 import Heros from "./components/heros";
-import Partenaires from "./components/partenaire";
+import PartenaireLay from "./components/partenaireLay";
 import Presentation from "./components/Presentation";
 import Temoignage from "./components/Temoignage";
 import Services from "./components/Services";
@@ -28,7 +28,7 @@ export default function Home() {
         background=" bg-white-light"
         padding=" lg:px-20 lg:py-32 px-5 py-10"
       >
-        <Partenaires />
+        <PartenaireLay />
       </Screenwidth>
       <Screenwidth
         background=" bg-light-100"

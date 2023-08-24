@@ -1,9 +1,22 @@
+"use client";
 import React from "react";
 import NbClients from "./mini/nbClients";
-import { getPartenaire } from "@/sanity/sanity-utils";
 
-const Partenaires = async () => {
-  const partern = await getPartenaire();
+import { Swiper, SwiperSlide } from "swiper/react";
+import style from "@/app/styles/swiper.module.css";
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
+// import required modules
+import { Pagination, EffectFade, Navigation, FreeMode } from "swiper";
+import { partenaire } from "../modele/modele";
+
+const Partenaires = async (props: { partern: partenaire[] }) => {
+  const { partern } = props;
   return (
     <div className="">
       <div className=" flex gap-4 flex-wrap  items-center justify-center ">
@@ -19,22 +32,33 @@ const Partenaires = async () => {
           ceux qui avec nous colaborons sainement
         </div>
       </div>
-      <div className=" mt-20 flex flex-row gap-4 items-center justify-center">
+      {/* <div className=" mt-20 flex flex-row gap-4 items-center justify-center"> */}
+      <Swiper
+        pagination={{
+          dynamicBullets: true,
+        }}
+        loop={true}
+        autoplay={{
+          delay: 200,
+          disableOnInteraction: false,
+        }}
+        freeMode={true}
+        slidesPerView={3}
+        modules={[Pagination, EffectFade, Navigation]}
+        className="mySwiper"
+      >
         {partern.map((item, index) => {
           return (
-            <div
-              key={index}
-              className="transform transition duration-500 hover:scale-110   md:w-[20%] w-1/2 "
-            >
+            <SwiperSlide key={index} className={style.swiperSlide}>
               <img
                 src={item.logo}
                 alt={item.nom}
                 className="object-fit w-full"
               />
-            </div>
+            </SwiperSlide>
           );
         })}
-      </div>
+      </Swiper>
     </div>
   );
 };
