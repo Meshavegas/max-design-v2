@@ -22,14 +22,14 @@ const Partenaires = (props: { partern: partenaire[] }) => {
             <MarqueeGroup>
               {partern.map((el, key) => (
                 <ImageGroup key={key}>
-                  <Image src={el.logo} />
+                  <Image src={el.logo} alt="image" />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
             <MarqueeGroup>
               {partern.map((el, key) => (
                 <ImageGroup key={key}>
-                  <Image src={el.logo} />
+                  <Image src={el.logo} alt="image" />
                 </ImageGroup>
               ))}
             </MarqueeGroup>
@@ -38,14 +38,14 @@ const Partenaires = (props: { partern: partenaire[] }) => {
             <MarqueeGroup2>
               {partern.map((el, key) => (
                 <ImageGroup key={key}>
-                  <Image src={el.logo} />
+                  <Image src={el.logo} alt="image" />
                 </ImageGroup>
               ))}
             </MarqueeGroup2>
             <MarqueeGroup2>
               {partern.map((el, key) => (
                 <ImageGroup key={key}>
-                  <Image src={el.logo} />
+                  <Image src={el.logo} alt="image" />
                 </ImageGroup>
               ))}
             </MarqueeGroup2>
