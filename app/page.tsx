@@ -11,16 +11,23 @@ import FAQ from "./components/FAQ";
 import { faqData } from "./components/datas";
 import Promotions from "./components/Promotions";
 import { ServicesGet } from "./components/ServicesGet";
+import Heros2 from "./components/heros2";
 export default function Home() {
   return (
     <main className="">
       <NavBar />
 
       <Screenwidth
-        background="bg-hero-image bg-left md:bg-center bg-cover flex justify-center"
+        background="bg-light bg-left md:bg-center bg-cover flex justify-center"
         padding=" "
       >
-        <div className="bg-light lg:px-0 lg:py-60 px-5 py-28 w-full bg-opacity-80 justify-center flex">
+        <Heros2 />
+      </Screenwidth>
+      <Screenwidth
+        background=" bg-left md:bg-center bg-cover flex justify-center"
+        padding=" "
+      >
+        <div className="bg-[#5890c2] lg:px-0 lg:py-60 px-5 py-28 w-full bg-opacity-80 justify-center flex">
           <Heros />
         </div>
       </Screenwidth>

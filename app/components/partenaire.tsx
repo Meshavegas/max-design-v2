@@ -17,7 +17,7 @@ const Partenaires = (props: { partern: partenaire[] }) => {
       <AppContainer>
         <Wrapper>
           <Text> Nos Partenaires</Text>
-          <Note>ceux qui avec nous colaborons sainement</Note>
+          <Note>Ceux avec qui nous colaborons sainement</Note>
           <Marquee>
             <MarqueeGroup>
               {partern.map((el, key) => (

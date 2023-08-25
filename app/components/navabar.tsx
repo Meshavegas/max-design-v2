@@ -22,7 +22,7 @@ const NavBar = () => {
     setIsOpen(false);
   };
   return (
-    <div className="sticky top-0 w-full bg-light h-[80px] z-40">
+    <div className="sticky top-0 w-full bg-light h-[80px] z-40 shadow-lg shadow-black">
       {/* <ScrollToHashElement /> */}
       <div className="flex justify-between items-center h-full px-4">
         <h1 className="flex items-center text-lg font-bold underline underline-offset-8 text-white">

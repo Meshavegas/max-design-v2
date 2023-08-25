@@ -5,6 +5,7 @@
 .back {
   border-radius: 83px;
   background: #005baa;
+  /* background-color: #e459ac; */
   box-shadow: 16px 16px 25px #004b8b, -16px -16px 25px #006bc9;
 }
 .swiper-button-next,
