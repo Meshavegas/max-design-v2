@@ -34,7 +34,7 @@ const Partenaires = (props: { partern: partenaire[] }) => {
               ))}
             </MarqueeGroup>
           </Marquee>
-          <Marquee>
+          <Marquee2>
             <MarqueeGroup2>
               {partern.map((el, key) => (
                 <ImageGroup key={key}>
@@ -49,7 +49,7 @@ const Partenaires = (props: { partern: partenaire[] }) => {
                 </ImageGroup>
               ))}
             </MarqueeGroup2>
-          </Marquee>
+          </Marquee2>
         </Wrapper>
       </AppContainer>
     </div>
@@ -92,21 +92,6 @@ const Note = styled.div`
   color: #7c8e9a;
 `;
 
-const Marquee = styled.div`
-  display: flex;
-  width: 1200px;
-  overflow: hidden;
-  user-select: none;
-
-  mask-image: linear-gradient(
-    to right,
-    hsl(0 0% 0% / 0),
-    hsl(0 0% 0% / 1) 10%,
-    hsl(0 0% 0% / 1) 90%,
-    hsl(0 0% 0% / 0)
-  );
-`;
-
 const scrollX = keyframes`
   from {
     left: translateX(0);
@@ -134,7 +119,42 @@ const MarqueeGroup2 = styled.div`
   animation-direction: reverse;
   animation-delay: -3s;
 `;
+const Marquee = styled.div`
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  user-select: none;
 
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+
+  &:hover ${MarqueeGroup} {
+    animation-play-state: paused;
+  }
+`;
+const Marquee2 = styled.div`
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  user-select: none;
+
+  mask-image: linear-gradient(
+    to right,
+    hsl(0 0% 0% / 0),
+    hsl(0 0% 0% / 1) 10%,
+    hsl(0 0% 0% / 1) 90%,
+    hsl(0 0% 0% / 0)
+  );
+
+  &:hover ${MarqueeGroup2} {
+    animation-play-state: paused;
+  }
+`;
 const ImageGroup = styled.div`
   display: grid;
   place-items: center;
