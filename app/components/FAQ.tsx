@@ -27,7 +27,9 @@ const FAQ = ({ data }: faqType2) => {
               className="flex justify-between w-full bg-blue-500 text-white py-2 px-4 rounded-lg border-b cursor-pointer"
               onClick={() => toggleQuestion(index)}
             >
-              <span className="font-bold text-2xl">{item.question}</span>
+              <span className="font-bold text-2xl text-light">
+                {item.question}
+              </span>
 
               <span>
                 {activeIndex === index ? (
