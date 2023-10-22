@@ -60,7 +60,7 @@ const Footer = () => {
           <h1 className=" font-bold text-light mt-2 mb-2">
             Souscrire a notre newsLetter
           </h1>
-          <div className="flex hover:cursor-pointer hover:text-orange w-fit border">
+          <div className="flex hover:cursor-pointer hover:text-orange w-fit border rounded-3xl">
             <input
               type="text"
               className=" rounded-3xl h-10 px-4  opacity-50 md:w-[400px]"
