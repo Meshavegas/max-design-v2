@@ -5,11 +5,23 @@ import {
   SlSocialFacebook,
 } from "react-icons/sl";
 import { BsArrowUpRight } from "react-icons/bs";
+import Link from "next/link";
+import Image from "next/image";
 const Footer = () => {
   return (
     <div>
       <div className=" flex justify-between items-center text-light">
-        <h1 className=" text-3xl font-bold text-light">Max-Design</h1>
+        <h1 className=" text-3xl font-bold text-light">
+          <Link href="/">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={1080}
+              height={1080}
+              className=" h-[70px] w-[60px] "
+            />
+          </Link>
+        </h1>
         <h1 className=" text-2xl text-light flex gap-4">
           <a href="#">
             <SlSocialInstagram />
