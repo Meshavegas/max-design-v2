@@ -20,6 +20,24 @@ const b93 = localFont({
   ],
   variable: "--font-ba93",
 });
+const behan = localFont({
+  src: [
+    {
+      path: "../public/fonts/BAHNSCHRIFT.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-behan",
+});
+const kazy = localFont({
+  src: [
+    {
+      path: "../public/fonts/KAZYcraie.ttf",
+      weight: "400",
+    },
+  ],
+  variable: "--font-kazy",
+});
 
 export default function RootLayout({
   children,
@@ -28,7 +46,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} ${b93.variable} font-sans`}>
+      <body
+        className={`${inter.className} ${b93.variable} ${behan.variable} ${kazy.variable} font-sans`}
+      >
         {children}
       </body>
       <Analytics />

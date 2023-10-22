@@ -35,23 +35,29 @@ export default function Home() {
         </div>
       </Screenwidth>
       <Screenwidth
+        background=" bg-white-light-s"
+        padding=" lg:px-32 lg:py-32 px-5 py-10"
+      >
+        <ServicesGet />
+      </Screenwidth>
+      <Screenwidth
         background=" bg-white-light"
         padding=" lg:px-20 lg:py-32 px-5 py-10"
       >
         <ParLay />
       </Screenwidth>
-      <Screenwidth
+      {/* <Screenwidth
         background=" bg-light-100"
         padding=" lg:px-0 lg:py-0 px-5 py-10"
       >
         <Presentation />
-      </Screenwidth>
+      </Screenwidth> 
       <Screenwidth
         background=" bg-light-100"
         padding=" lg:px-0 lg:py-0 px-5 py-10"
       >
         <Promotions />
-      </Screenwidth>
+      </Screenwidth>*/}
       <Screenwidth
         background=" bg-white-light"
         padding=" lg:px-20 lg:py-20 px-10 py-10"
@@ -59,13 +65,7 @@ export default function Home() {
         <Temoignage />
       </Screenwidth>
       <Screenwidth
-        background=" bg-white-light-s"
-        padding=" lg:px-32 lg:py-32 px-5 py-10"
-      >
-        <ServicesGet />
-      </Screenwidth>
-      <Screenwidth
-        background=" bg-gray"
+        background=" bg-[#FDC8FE]"
         padding=" lg:px-10 lg:py-20 px-5 py-10"
       >
         <FAQ data={faqData} />

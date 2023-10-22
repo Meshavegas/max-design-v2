@@ -16,8 +16,10 @@ const Partenaires = (props: { partern: partenaire[] }) => {
       <div className=" border-b border-b-orange mt-2"></div>
       <AppContainer>
         <Wrapper>
-          <Text> Nos Partenaires</Text>
-          <Note>Ceux avec qui nous colaborons sainement</Note>
+          <Text className=" text-orange font-b93"> Nos Partenaires</Text>
+          <Note className=" font-bahn">
+            Ceux avec qui nous colaborons sainement
+          </Note>
           <Marquee>
             <MarqueeGroup>
               {partern.map((el, key) => (
@@ -82,7 +84,6 @@ const Text = styled.div`
   font-size: 35px;
   font-weight: 500;
   margin-bottom: 10px;
-  color: #02203c;
 `;
 
 const Note = styled.div`

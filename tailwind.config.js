@@ -22,8 +22,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        bahn: ["bahnsc", "sans"],
+        bahn: ["var(--font-behan)"],
         b93: ["var(--font-ba93)"],
+        kazy: ["var(--font-kazy)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

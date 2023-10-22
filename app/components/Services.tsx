@@ -30,10 +30,10 @@ const Services = (props: { service: service[] }) => {
       {services.length > 0 ? (
         <div className="">
           <div className=" flex  justify-between flex-col lg:flex-row">
-            <h1 className=" text-3xl font-bold">
+            <h1 className=" text-3xl font-bold font-b93 text-orange">
               Les different ofres et services
             </h1>
-            <div className=" bg-white  flex flex-row w-fit px-1 py-1 rounded-3xl gap-1 flex-wrap ">
+            <div className=" bg-white  flex flex-row w-fit px-1 py-1 rounded-3xl gap-1 flex-wrap font-b93">
               <h1
                 className={` transition-colors duration-500  w-[70px] px-3 py-1 rounded-2xl hover:cursor-pointer h-fit ${
                   filtreFonction === ""
