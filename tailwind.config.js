@@ -21,6 +21,10 @@ module.exports = {
       black: "#000",
     },
     extend: {
+      fontFamily: {
+        bahn: ["bahnsc", "sans"],
+        b93: ["var(--font-ba93)"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

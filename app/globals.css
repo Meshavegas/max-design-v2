@@ -22,6 +22,17 @@
   font-size: 1rem;
   font-weight: 700;
 }
+@font-face {
+  font-family: "bahnsc";
+  src: url("/fonts/BAHNSCHRIFT.TTF") format("TTF");
+  /* Ajoutez d'autres formats de police si nécessaire */
+}
+/*
+@font-face {
+  font-family: "B93";
+  src: url("/fonts/Bauhaus93Regular.ttf") format("ttf");
+}
+Ajoutez d'autres formats de police si nécessaire */
 
 .swiper-pagination-bullet {
   background-color: #004b8b;
