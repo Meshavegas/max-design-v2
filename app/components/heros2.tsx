@@ -84,7 +84,7 @@ const Heros2 = () => {
               transition={{ duration: 0.5 }}
               className=" w-5/6 transform transition duration-500 -rotate-6 hover:-rotate-0 back flex flex-col justify-center items-center gap-4 bg-light py-10 px-3 md:py-10 md:px-8  rounded-xl md:w-1/3 "
             > */}
-            <div className="bg-repeat-x bg-hero-image-mobile md:bg-hero-image md:w-full w-full h-[400px] md:h-[609px] bg-contain md:bg-cover	"></div>
+            <div className="bg-repeat-x bg-hero-image-mobile md:bg-hero-image md:w-full w-full h-[400px] md:h-[709px] bg-contain md:bg-cover	"></div>
             {/* <Image
               src="/hero2.jpeg"
               alt="logo"
