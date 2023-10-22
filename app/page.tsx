@@ -17,12 +17,15 @@ export default function Home() {
     <main className="">
       <NavBar />
 
-      <Screenwidth
+      {/* <Screenwidth
         background="bg-light bg-left md:bg-center bg-cover flex justify-center"
-        padding=" "
+        padding=" " 
       >
+        */}
+      <div>
         <Heros2 />
-      </Screenwidth>
+      </div>
+      {/* </Screenwidth> */}
       <Screenwidth
         background=" bg-left md:bg-center bg-cover flex justify-center"
         padding=" "
@@ -68,7 +71,7 @@ export default function Home() {
         <FAQ data={faqData} />
       </Screenwidth>
       <Screenwidth
-        background="bg-light"
+        background="bg-white"
         padding=" lg:px-10 lg:py-10 px-5 py-10"
       >
         <Footer />

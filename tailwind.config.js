@@ -29,7 +29,8 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-image": 'url("/hero.jpg")',
+        "hero-image": 'url("/hero2.jpeg")',
+        "hero-image-mobile": 'url("/hero3.jpeg")',
       },
     },
   },
