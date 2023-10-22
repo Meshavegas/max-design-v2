@@ -65,7 +65,7 @@ export default function Home() {
         <Temoignage />
       </Screenwidth>
       <Screenwidth
-        background=" bg-[#FDC8FE]"
+        background=" bg-[#FFECFF]"
         padding=" lg:px-10 lg:py-20 px-5 py-10"
       >
         <FAQ data={faqData} />
