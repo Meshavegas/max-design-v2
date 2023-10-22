@@ -72,38 +72,9 @@ const Heros2 = () => {
         <SwiperSlide>
           <motion.div
             ref={ref}
-            className="bg-light lg:px-0 lg:py-60 px-5 py-28 w-full  gap-5 justify-center flex items-center md:flex-row flex-col"
+            className="bg-light w-full  gap-5 justify-center flex items-center md:flex-row flex-col"
           >
-            <p className=" w-5/6 md:w-1/3">
-              <motion.h2
-                variants={{
-                  hidden: { opacity: 1, x: -75 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                initial="visible"
-                animate={control}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className=" text-2xl font-extrabold text-white"
-              >
-                Nos performance agreable
-              </motion.h2>
-              <motion.p
-                variants={{
-                  hidden: { opacity: 1, x: -75 },
-                  visible: { opacity: 1, x: 0 },
-                }}
-                initial="visible"
-                animate={control}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className=" text-xl"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-                eos repellat quibusdam, natus et labore dignissimos quisquam
-                perspiciatis sequi dicta officia doloremque, vel tenetur.
-                Possimus quaerat porro reiciendis necessitatibus alias?
-              </motion.p>
-            </p>
-            <motion.div
+            {/* <motion.div
               variants={{
                 hidden: { opacity: 1, x: 75 },
                 visible: { opacity: 1, x: 0 },
@@ -112,18 +83,19 @@ const Heros2 = () => {
               animate={control}
               transition={{ duration: 0.5 }}
               className=" w-5/6 transform transition duration-500 -rotate-6 hover:-rotate-0 back flex flex-col justify-center items-center gap-4 bg-light py-10 px-3 md:py-10 md:px-8  rounded-xl md:w-1/3 "
-            >
-              <Image
-                src="/hero.jpg"
-                alt="logo"
-                width={1080}
-                height={1080}
-                className=" lg:w-full rounded-[3rem] shadow-2xl shadow-black"
-              />
-            </motion.div>
+            > */}
+            <div className="bg-repeat-x bg-hero-image-mobile md:bg-hero-image md:w-full w-full h-[400px] md:h-[609px] bg-contain	"></div>
+            {/* <Image
+              src="/hero2.jpeg"
+              alt="logo"
+              width={1080}
+              height={1080}
+              className=" lg:w-full"
+            /> */}
+            {/* </motion.div> */}
           </motion.div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <motion.div
             ref={ref}
             className="bg-light lg:px-0 lg:py-60 px-5 py-28 w-full  gap-5 justify-center flex items-center md:flex-row flex-col"
@@ -230,7 +202,7 @@ const Heros2 = () => {
               />
             </motion.div>
           </motion.div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </div>
     </Swiper>
   );

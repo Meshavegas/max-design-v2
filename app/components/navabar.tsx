@@ -18,21 +18,19 @@ const NavBar = () => {
   const handleIsOpen = () => {
     setIsOpen((prev) => !prev);
   };
-  const handleNavigate = () => {
-    setIsOpen(false);
-  };
+
   return (
-    <div className="sticky top-0 w-full bg-white h-[80px] z-40 shadow font-b93">
+    <div className="sticky top-0 w-full bg-white h-[80px] z-40 shadow font-b93 text-2xl">
       {/* <ScrollToHashElement /> */}
       <div className="flex justify-between items-center h-full px-4">
         <h1 className="flex items-center text-lg font-bold underline underline-offset-8 text-light">
           <Link href="/">
             <Image
-              src="/vercel.png"
+              src="/logo.png"
               alt="logo"
               width={1080}
               height={1080}
-              className=" md:w-28 w-20 "
+              className=" h-[70px] w-[60px] "
             />
           </Link>
         </h1>
@@ -78,11 +76,12 @@ const NavBar = () => {
       </div>
       {isOpen && (
         <div className="bg-white p-4 z-40 absolute w-full md:hidden  ">
-          <ul className=" flex flex-col items-start gap-4">
+          <ul className=" flex flex-col items-start gap-4 justify-center">
             {navLinks.map(({ name, to }) => (
               <Link
                 key={name + to}
                 href={to}
+                onClick={() => setIsOpen(false)}
                 className="text-light hover:text-orange"
               >
                 {name}
@@ -90,7 +89,7 @@ const NavBar = () => {
             ))}
           </ul>
           <div className="mt-4 md:hidden flex items-center justify-between gap-6">
-            <div className="flex items-center   text-orange text-xl bg-light p-3 rounded-full hover:bg-white hover:text-black focus:outline-none justify-center align-middle">
+            <div className="flex items-center   text-white text-xl bg-light p-3 rounded-full hover:bg-orange focus:outline-none justify-center align-middle">
               <a
                 href="https://wa.me/237677899380?text=Bonjour+*max+Design*+depuis+votre+site"
                 target="_blank"
