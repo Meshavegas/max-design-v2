@@ -26,7 +26,7 @@ const SingleTemoignange = () => {
         <p className="">
           <BsQuote style={{ fontSize: "3rem" }} />
         </p>
-        <p className=" text-2xl md:text-justify line-clamp-6 font-kazy font-light">
+        <p className=" text-2xl md:text-justify line-clamp-6 font-kazy">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque
           laboriosam necessitatibus ex perferendis ullam unde ipsam veniam
           quibusdam commodi blanditiis. SingleTemoignange Lorem ipsum dolor sit
