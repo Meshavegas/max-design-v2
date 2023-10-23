@@ -25,7 +25,7 @@ const Temoignage = () => {
 
   return (
     <div className="flex flex-col justify-center items-center ">
-      <div className=" text-4xl font-bold pb-5 text-orange uppercase font-b93">
+      <div className=" text-4xl font-bold pb-5 text-orange uppercase font-b93 tracking-[0.2em]">
         Témoignage
       </div>
 
