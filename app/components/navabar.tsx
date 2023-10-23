@@ -9,9 +9,9 @@ import { FiMenu } from "react-icons/fi";
 export const navLinks = [
   { name: "Home", to: "/" },
   { name: "Services", to: "/#services" },
-  { name: "Partenaires", to: "/#partenaires" },
   { name: "Contacts", to: "/#contact" },
-  { name: "Réalisations", to: "/realisations" },
+  { name: "Partenaires", to: "/#partenaires" },
+  { name: "FAQ", to: "/#faq" },
 ];
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
