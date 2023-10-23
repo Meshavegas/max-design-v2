@@ -1,5 +1,9 @@
 export const faqData = [
   {
+    question: "Ou est vous situe",
+    reponse: "Cameroun, Yaounde, Bonas",
+  },
+  {
     question: "Qu'est-ce que l'infographie ?",
     reponse:
       "L'infographie est une représentation visuelle d'informations complexes à travers des graphiques, des images et des illustrations.",
