@@ -41,7 +41,7 @@ export default function Home() {
         <ServicesGet />
       </Screenwidth>
       <Screenwidth
-        background=" bg-white-light"
+        background=" bg-[#4D8BBA]"
         padding=" lg:px-20 lg:py-32 px-5 py-10"
       >
         <ParLay />
