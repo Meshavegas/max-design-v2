@@ -26,6 +26,9 @@ const SingleService = (props: { service: service }) => {
       <div className="line-clamp-3 font-bahn">
         <PortableText value={props.service.content} />
       </div>
+      <div className=" py-2 px-4 bg-light text-white my-2 w-fit  text-2xl font-kazy rounded-3xl">
+        <a className="">Demander un devis</a>
+      </div>
     </div>
   );
 };
