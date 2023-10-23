@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div>
       <div className=" flex justify-between items-center text-light">
-        <h1 className=" text-3xl font-bold text-light">
+        <h1 className=" text-3xl font-bold text-light flex justify-center items-center gap-3">
           <Link href="/">
             <Image
               src="/logo.png"
@@ -21,6 +21,7 @@ const Footer = () => {
               className=" h-[70px] w-[60px] "
             />
           </Link>
+          MAX DESIGN
         </h1>
         <h1 className=" text-2xl text-light flex gap-4">
           <a href="#">
@@ -45,24 +46,24 @@ const Footer = () => {
           </div>
         </div>
         <div className=" flex flex-wrap mt-2 md:justify-end gap-7 text-light md:w-3/5  px-2">
-          <div className="">
+          <div className=" cursor-pointer">
             <h1 className=" text-xl font-bold">Resources</h1>
-            <h2 className="">Commander</h2>
-            <h2 className="">Nous contacter</h2>
-            <h3 className="">Resources</h3>
+            <h2 className="cursor-pointer">Commander</h2>
+            <h2 className="cursor-pointer">Nous contacter</h2>
+            <h3 className="cursor-pointer">Resources</h3>
           </div>
-          <div className="">
+          <div className="cursor-pointer">
             <h1 className="text-xl font-bold">Notre Companie</h1>
-            <h2 className="">Commander</h2>
-            <h2 className="">Nous contacter</h2>
-            <h3 className="">Resources</h3>
+            <h2 className="cursor-pointer">Commander</h2>
+            <h2 className="cursor-pointer">Nous contacter</h2>
+            <h3 className="cursor-pointer">Resources</h3>
           </div>
-          <div className="">
+          <div className="cursor-pointer">
             <h1 className="text-xl font-bold">Support</h1>
-            <h2 className="">Help Center</h2>
-            <h2 className="">FAQ</h2>
-            <h3 className="">Plus de questions</h3>
-            <h3 className="">Tarification</h3>
+            <h2 className="cursor-pointer">Help Center</h2>
+            <h2 className="cursor-pointer">FAQ</h2>
+            <h3 className="cursor-pointer">Plus de questions</h3>
+            <h3 className="cursor-pointer">Tarification</h3>
           </div>
         </div>
       </div>
@@ -85,10 +86,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className=" mt-2 flex flex-col md:flex-row md:justify-end  gap-4 md:gap-16 font-bold text-light w-full md:w-3/5">
-          <h1>Politique de confidentialite</h1>
-          <h1>conditions et services</h1>
-          <h1>cookies</h1>
+        <div className="cursor-pointer mt-2 flex flex-col md:flex-row md:justify-end  gap-4 md:gap-16 font-bold text-light w-full md:w-3/5">
+          <h1 className="cursor-pointer ">Politique de confidentialite</h1>
+          <h1 className="cursor-pointer ">conditions et services</h1>
+          <h1 className="cursor-pointer ">cookies</h1>
         </div>
       </div>
     </div>
