@@ -26,9 +26,18 @@ export default function Home() {
         <Heros2 />
       </div>
       {/* </Screenwidth> */}
+
+      <Screenwidth
+        background=" bg-white-light-s"
+        padding=" lg:px-32 lg:py-32 px-5 py-10"
+        id="services"
+      >
+        <ServicesGet />
+      </Screenwidth>
       <Screenwidth
         background=" bg-left md:bg-center bg-cover flex justify-center"
         padding=" "
+        id="contact"
       >
         <div className="bg-[#5890c2] lg:px-0 lg:py-60 px-5 py-28 w-full bg-opacity-80 justify-center flex">
           <Heros />
@@ -36,13 +45,8 @@ export default function Home() {
       </Screenwidth>
       <Screenwidth
         background=" bg-white-light-s"
-        padding=" lg:px-32 lg:py-32 px-5 py-10"
-      >
-        <ServicesGet />
-      </Screenwidth>
-      <Screenwidth
-        background=" bg-[#4D8BBA]"
         padding=" lg:px-20 lg:py-32 px-5 py-10"
+        id={"partenaires"}
       >
         <ParLay />
       </Screenwidth>
@@ -61,12 +65,14 @@ export default function Home() {
       <Screenwidth
         background=" bg-white-light"
         padding=" lg:px-20 lg:py-20 px-10 py-10"
+        id="testimony"
       >
         <Temoignage />
       </Screenwidth>
       <Screenwidth
         background=" bg-[#FFECFF]"
         padding=" lg:px-10 lg:py-20 px-5 py-10"
+        id="faq"
       >
         <FAQ data={faqData} />
       </Screenwidth>
