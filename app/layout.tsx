@@ -23,7 +23,7 @@ const b93 = localFont({
 const behan = localFont({
   src: [
     {
-      path: "../public/fonts/BAHNSCHRIFT.ttf",
+      path: "../public/fonts/BAHNSCHRIFT.TTF",
       weight: "400",
     },
   ],
