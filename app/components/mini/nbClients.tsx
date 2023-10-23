@@ -8,12 +8,12 @@ type props = {
 const NbClients = ({ nombre, type, classname }: props) => {
   return (
     <div
-      className={`flex flex-col ${classname} justify-center items-center boder`}
+      className={`flex flex-row gap-3 ${classname} justify-center items-center  font-kazy`}
     >
-      <div className=" text-4xl font-bold">
-        <CountUp end={nombre} duration={15} />K
+      <div className=" text-4xl font-bold ">
+        <CountUp end={nombre} duration={15} />
       </div>
-      <div className=" text-3xl">{type}</div>
+      <div className=" text-4xl">{type}</div>
     </div>
   );
 };
