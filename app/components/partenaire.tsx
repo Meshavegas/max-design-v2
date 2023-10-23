@@ -10,14 +10,25 @@ const Partenaires = (props: { partern: partenaire[] }) => {
   return (
     <div>
       <div className=" flex gap-4 flex-wrap  items-center justify-center  ">
-        <NbClients nombre={104} type="Clients" classname="w-1/3 md:w-1/5" />
-        <NbClients nombre={104} type="Projects " classname="w-1/3 md:w-1/5" />
+        <NbClients
+          nombre={1200}
+          type="Clients"
+          classname="w-1/3 md:w-1/5 text-light"
+        />
+        <NbClients
+          nombre={2580}
+          type="Projets "
+          classname="w-1/3 md:w-1/5 text-light"
+        />
       </div>
-      <div className=" border-b border-b-orange mt-2"></div>
+      <div className=" border-b border-b-light mt-2"></div>
       <AppContainer>
         <Wrapper>
-          <Text className=" text-orange font-b93"> Nos Partenaires</Text>
-          <Note className=" font-bahn">
+          <Text className=" text-light font-b93 uppercase text-3xl tracking-[0.2em]">
+            {" "}
+            Nos Partenaires
+          </Text>
+          <Note className=" font-bahn text-light">
             Ceux avec qui nous colaborons sainement
           </Note>
           <Marquee>
@@ -90,7 +101,6 @@ const Note = styled.div`
   font-size: 18px;
   font-weight: 200;
   margin-bottom: 40px;
-  color: #7c8e9a;
 `;
 
 const scrollX = keyframes`
