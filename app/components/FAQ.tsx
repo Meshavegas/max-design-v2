@@ -17,7 +17,7 @@ const FAQ = ({ data }: faqType2) => {
   };
   return (
     <div>
-      <div className=" text-center font-bold text-3xl uppercase font-b93 text-orange">
+      <div className=" text-center font-bold text-3xl uppercase font-b93 text-orange tracking-[0.2em]">
         Foire aux questions
       </div>
       <div className="space-y-4">
