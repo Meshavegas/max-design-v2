@@ -30,8 +30,8 @@ const Services = (props: { service: service[] }) => {
       {services.length > 0 ? (
         <div className="">
           <div className=" flex  justify-between flex-col lg:flex-row">
-            <h1 className=" text-3xl font-bold font-b93 text-orange uppercase tracking-[0.2em]">
-              Nos different ofres et services
+            <h1 className=" text-4xl font-bold font-b93 text-orange  tracking-[0.2em]">
+              Nos Services
             </h1>
             <div className=" bg-white  flex flex-row w-fit px-1 py-1 rounded-3xl gap-1 flex-wrap font-b93">
               <h1
@@ -76,9 +76,9 @@ const Services = (props: { service: service[] }) => {
               </h1>
             </div>
           </div>
-          <div className=" transform transition duration-500 hover:scale-110  mt-2 w-fit  text-2xl px-2 py-1 outline rounded-3xl outline-light text-light capitalize cursor-pointer hover:text-white hover:bg-light">
+          {/* <div className=" transform transition duration-500 hover:scale-110  mt-2 w-fit  text-2xl px-2 py-1 outline rounded-3xl outline-light text-light capitalize cursor-pointer hover:text-white hover:bg-light">
             Voir tout
-          </div>
+          </div> */}
           <div className="mt-8 flex md:flex-wrap gap-4  w-full flex-col md:flex-row">
             {services.map((item, index) => {
               return <SingleService key={index} service={item} />;
