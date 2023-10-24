@@ -11,7 +11,7 @@ body,
   scroll-behavior: smooth;
 
   /* Prevents overflow on the x-axis */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .back {
