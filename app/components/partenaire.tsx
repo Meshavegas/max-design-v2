@@ -9,7 +9,7 @@ const Partenaires = (props: { partern: partenaire[] }) => {
 
   return (
     <div>
-      <div className=" flex gap-4 flex-wrap  items-center justify-center  ">
+      <div className=" flex gap-4 flex-wrap  items-center justify-center md:flex-row flex-col ">
         <NbClients
           nombre={1200}
           type="Clients"
