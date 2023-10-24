@@ -1,9 +1,11 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import { service } from "@/app/modele/modele";
 import { PortableText } from "@portabletext/react";
 
 const SingleService = (props: { service: service }) => {
+  const [showMore, setShowMore] = useState(false);
   // console.log(props.service.category);
 
   return (
@@ -22,10 +24,23 @@ const SingleService = (props: { service: service }) => {
           />
         )}
       </div>
-      <h1 className=" font-bold text-2xl mt-2 ">{props.service.title}</h1>
-      <div className="line-clamp-3 font-bahn">
+      <h1 className=" text-2xl mt-2 text-light font-b93 tracking-[0.14em]">
+        {props.service.title}
+      </h1>
+      <div
+        className={` font-bahn ${showMore ? "show-all-text" : "line-clamp-3"}`}
+        onClick={() => setShowMore(!showMore)}
+      >
         <PortableText value={props.service.content} />
       </div>
+      {!showMore && (
+        <span
+          onClick={() => setShowMore(true)}
+          className=" text-orange font-bold"
+        >
+          Voir plus
+        </span>
+      )}
       <div className=" py-2 px-4 bg-light text-white my-2 w-fit  text-2xl font-kazy rounded-3xl">
         <a className="">Demander un devis</a>
       </div>
