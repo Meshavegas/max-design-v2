@@ -1,19 +1,25 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { BsQuote } from "react-icons/bs";
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import SingleTemoignange from "./mini/SingleTemoignange";
-import { Carousel } from "react-responsive-carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+import "swiper/css";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const Temoignage = () => {
   const state = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }];
   const [screenSize, setScreenSize] = useState(1024);
 
   const control = useAnimation();
-  const [ref, inView] = useInView();
-
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false });
   useEffect(() => {
     setScreenSize(window.screen.width);
   }, []);
@@ -30,6 +36,29 @@ const Temoignage = () => {
       </div>
 
       <div className="flex flex-wrap gap-4 justify-center  mt-2">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          autoplay={{
+            delay: 10000,
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+          }}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <div className="">
+            <SwiperSlide>
+              <motion.div
+                ref={ref}
+                className="bg-light w-full  gap-5 justify-center flex items-center md:flex-row flex-col"
+              >
+                <div className=""></div>
+              </motion.div>
+            </SwiperSlide>
+          </div>
+        </Swiper>
         <SingleTemoignange />
         <SingleTemoignange />
         <SingleTemoignange />
