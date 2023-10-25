@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import SingleService from "./mini/SingleService";
 import { service } from "../modele/modele";
+import { motion } from "framer-motion";
 
 const Services = (props: { service: service[] }) => {
   const [services, setServices] = useState(props.service);
@@ -79,11 +80,14 @@ const Services = (props: { service: service[] }) => {
           {/* <div className=" transform transition duration-500 hover:scale-110  mt-2 w-fit  text-2xl px-2 py-1 outline rounded-3xl outline-light text-light capitalize cursor-pointer hover:text-white hover:bg-light">
             Voir tout
           </div> */}
-          <div className="mt-8 flex md:flex-wrap gap-4  w-full flex-col md:flex-row">
+          <motion.div
+            layout
+            className="mt-8 flex md:flex-wrap gap-4  w-full flex-col md:flex-row"
+          >
             {services.map((item, index) => {
               return <SingleService key={index} service={item} />;
             })}
-          </div>
+          </motion.div>
         </div>
       ) : (
         <div className="">vide</div>
