@@ -22,9 +22,9 @@ const FAQ = ({ data }: faqType2) => {
       </div>
       <div className="space-y-4">
         {data.map((item, index) => (
-          <div key={index}>
+          <div key={index} className="rounded-lg border border-white">
             <div
-              className="flex justify-between w-full bg-blue-500 text-white py-2 px-4 rounded-lg border-b cursor-pointer"
+              className="flex justify-between w-full bg-blue-500 text-white rounded-lg  py-2 px-4 cursor-pointer bg-light-100"
               onClick={() => toggleQuestion(index)}
             >
               <span className="font-bold text-2xl text-light">
@@ -33,9 +33,13 @@ const FAQ = ({ data }: faqType2) => {
 
               <span>
                 {activeIndex === index ? (
-                  <IoIosArrowDropup style={{ fontSize: "1.8rem" }} />
+                  <IoIosArrowDropup
+                    style={{ fontSize: "1.8rem", color: "#005BAA" }}
+                  />
                 ) : (
-                  <IoIosArrowDropdown style={{ fontSize: "1.8rem" }} />
+                  <IoIosArrowDropdown
+                    style={{ fontSize: "1.8rem", color: "#005BAA" }}
+                  />
                 )}
               </span>
             </div>

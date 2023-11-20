@@ -5,7 +5,7 @@ const config = defineConfig({
   projectId: "4gnd9rik",
   dataset: "production",
   title: "Mesha vegas",
-  apiVersion: "2023-03-04",
+  apiVersion: "2023-09-04",
   basePath: "/admin",
   plugins: [deskTool()],
   schema: { types: schemas },
