@@ -18,7 +18,7 @@ export type service = {
 
 export type Cathegorie = {
   _id: string;
-  title: string;
+  name: string;
 };
 
 export type partenaire = {

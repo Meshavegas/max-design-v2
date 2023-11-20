@@ -9,11 +9,13 @@ const Services = (props: { service: service[] }) => {
   // console.log(services);
   const [filtreFonction, setFiltreFonction] = useState("");
   useEffect(() => {
+    // console.log(services);
+
     //  service
     if (filtreFonction !== "") {
       let catfilItems = [];
       for (let i = 0; i < props.service.length; i++) {
-        if (props.service[i].category.title === filtreFonction) {
+        if (props.service[i].category.name === filtreFonction) {
           catfilItems.push(props.service[i]);
         }
       }
