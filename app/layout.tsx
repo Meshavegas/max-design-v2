@@ -46,6 +46,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <meta name="google-site-verification" content="oInCOSUazCFCrhz4wMCS__dlvGhgvrqfwKMOrp6dz-0" />
       <body
         className={`${inter.className} ${b93.variable} ${behan.variable} ${kazy.variable} font-sans`}
       >
