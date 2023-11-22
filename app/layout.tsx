@@ -8,7 +8,7 @@ import localFont from "@next/font/local";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Max design",
+  title: "Max design : Infographie",
   description: "Design infographe shooter",
 };
 const b93 = localFont({
