@@ -62,13 +62,13 @@ export default function Home() {
       >
         <Promotions />
       </Screenwidth>*/}
-      <Screenwidth
+      {/* <Screenwidth
         background=" bg-white-light"
         padding=" lg:px-20 lg:py-20 px-10 py-10"
         id="testimony"
       >
         <Temoignage />
-      </Screenwidth>
+      </Screenwidth> */}
       <Screenwidth
         background=" bg-[#FFECFF]"
         padding=" lg:px-10 lg:py-20 px-5 py-10"

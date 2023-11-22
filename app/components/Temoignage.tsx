@@ -29,6 +29,29 @@ const Temoignage = () => {
     }
   }, [control, inView]);
 
+  const [slidesPerView, setSlidesPerView] = useState(1);
+
+  useEffect(() => {
+    const updateSlidesPerView = () => {
+      if (window.innerWidth >= 768) {
+        setSlidesPerView(3);
+      } else {
+        setSlidesPerView(1);
+      }
+    };
+
+    // Appelez la fonction initiale pour définir la valeur initiale lors du montage du composant
+    updateSlidesPerView();
+
+    // Attachez l'événement de redimensionnement pour mettre à jour le nombre d'éléments par vue
+    window.addEventListener("resize", updateSlidesPerView);
+
+    // Nettoyez l'événement lors du démontage du composant
+    return () => {
+      window.removeEventListener("resize", updateSlidesPerView);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center ">
       <div className=" text-4xl font-bold pb-5 text-orange uppercase font-b93 tracking-[0.2em]">
@@ -38,7 +61,7 @@ const Temoignage = () => {
       <div className="flex flex-wrap gap-4 justify-center  mt-2">
         <Swiper
           spaceBetween={50}
-          slidesPerView={1}
+          slidesPerView={slidesPerView}
           autoplay={{
             delay: 10000,
             pauseOnMouseEnter: true,
@@ -48,20 +71,16 @@ const Temoignage = () => {
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
-          <div className="">
-            <SwiperSlide>
-              <motion.div
-                ref={ref}
-                className="bg-light w-full  gap-5 justify-center flex items-center md:flex-row flex-col"
-              >
-                <div className=""></div>
-              </motion.div>
-            </SwiperSlide>
-          </div>
+          <SwiperSlide>
+            <SingleTemoignange />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SingleTemoignange />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SingleTemoignange />
+          </SwiperSlide>
         </Swiper>
-        <SingleTemoignange />
-        <SingleTemoignange />
-        <SingleTemoignange />
       </div>
     </div>
   );

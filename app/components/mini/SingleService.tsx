@@ -43,7 +43,13 @@ const SingleService = (props: { service: service }) => {
         </span>
       )}
       <div className=" py-2 px-4 bg-light text-white my-2 w-fit  text-2xl font-kazy rounded-3xl">
-        <a className="">Demander un devis</a>
+        <a
+          target="_blank"
+          className=""
+          href={`https://wa.me/237677899380?text=Bonjour+Monsieur%2C%0AJ%27ai+r%C3%A9cemment+d%C3%A9couvert+votre+service+sur+votre+site+web+et+je+suis+tr%C3%A8s+int%C3%A9ress%C3%A9%28e%29.%0APourriez-vous+me+fournir+plus+d%27informations+sur+*${props.service.title}*+%3F`}
+        >
+          Demander un devis
+        </a>
       </div>
     </motion.div>
   );
