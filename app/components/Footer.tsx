@@ -27,7 +27,7 @@ const Footer = () => {
           <a href="#">
             <SlSocialInstagram />
           </a>
-          <a href="#">
+          <a href="https://www.facebook.com/maxdesign237/" target="_blank">
             <SlSocialFacebook />
           </a>
           <a href="#">

@@ -24,7 +24,7 @@ const Services = (props: { service: service[] }) => {
 
       // console.log(res);
     } else {
-      setServices(props.service);
+      setServices(props.service.slice(0, 6));
     }
   }, [filtreFonction]);
 
@@ -45,7 +45,7 @@ const Services = (props: { service: service[] }) => {
                 }`}
                 onClick={() => setFiltreFonction("")}
               >
-                All
+                Top 6
               </h1>
               <h1
                 className={`transition-colors duration-500  w-fit px-2 py-1 rounded-2xl hover:cursor-pointer h-fit ${
